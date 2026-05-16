@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen px-4 py-6 font-serif sm:px-6 md:px-8 lg:px-12 xl:px-[90px] lg:py-10">
+  <!-- navigation -->
+   
+  <nav class="flex w-full flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+    
+    <section class="flex w-full items-center justify-between gap-4 lg:w-auto lg:justify-start lg:gap-5">
+
+      <img src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c3fed42405e70f33df42ee_logo.svg" alt="" />
+
+      <div class="desktop-hiring-pill rounded-full bg-[#EBDFD6] px-5 py-2.5 text-xs font-medium">
+        We Are Hiring!
+      </div>
+
+      <button id="menu-toggle" type="button"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-black text-2xl transition-colors hover:bg-black hover:text-white lg:hidden"
+        aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+        <i class="ri-menu-line" aria-hidden="true"></i>
+      </button>
+    </section>
+
+    <ul class="hidden w-full flex-wrap list-none items-center justify-start gap-x-5 gap-y-4 text-sm sm:text-base lg:flex lg:w-auto lg:justify-end lg:gap-[50px]">
+      <li class="group flex cursor-pointer items-center whitespace-nowrap">
+        <span
+          class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Work</span>
+      </li>
+      <li class="group flex cursor-pointer items-center whitespace-nowrap">
+        <span
+          class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Services</span>
+      </li>
+      <li class="group flex cursor-pointer items-center whitespace-nowrap">
+        <span
+          class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">About</span>
+      </li>
+      <li class="group flex cursor-pointer items-center whitespace-nowrap">
+        <span
+          class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Blog</span>
+      </li>
+      <li class="group flex cursor-pointer items-center whitespace-nowrap">
+        <span
+          class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Pages</span>
+      </li>
+      <li class="flex cursor-pointer items-center whitespace-nowrap">
+        Cart
+        <span
+          class="ml-[10px] rounded-full bg-[#EBDFD6] px-3 text-base py-1">0</span>
+      </li>
+      <li>
+        <button
+          class="cursor-pointer rounded-[30px] border border-black bg-white px-5 py-2.5 transition-colors hover:bg-black hover:text-white sm:px-[30px]">
+          Get In Touch
+        </button>
+      </li>
+    </ul>
+
+    <section id="mobile-menu" class="hidden border-t border-[#E4E4E7] pt-5 lg:hidden">
+
+      <ul class="flex list-none flex-col gap-4 text-lg">
+        <li class="group flex cursor-pointer items-center">
+          <span
+            class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Work</span>
+        </li>
+        <li class="group flex cursor-pointer items-center">
+          <span
+            class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Services</span>
+        </li>
+        <li class="group flex cursor-pointer items-center">
+          <span
+            class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">About</span>
+        </li>
+        <li class="group flex cursor-pointer items-center">
+          <span
+            class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Blog</span>
+        </li>
+        <li class="group flex cursor-pointer items-center">
+          <span
+            class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Pages</span>
+        </li>
+        <li class="flex cursor-pointer items-center">
+          Cart
+          <span class="ml-[10px] rounded-full bg-[#EBDFD6] px-3 py-1 text-base">0</span>
+        </li>
+      </ul>
+
+      <button
+        class="mt-6 cursor-pointer rounded-[30px] border border-black bg-white px-5 py-2.5 transition-colors hover:bg-black hover:text-white sm:px-[30px]">
+        Get In Touch
+      </button>
+    </section>
+  </nav>
+
+  <hr class="mt-5 h-px border-0 bg-[#F4F4F5]" />
+
+  <!-- hero page -->
+
+  <section class="flex w-full max-w-6xl items-center pt-16 sm:pt-20 lg:pt-[16vh]">
+    <div>
+      <h3 class="max-w-5xl font-sans text-4xl font-extralight leading-[1.05] sm:text-6xl md:text-7xl lg:text-[90px] xl:text-[100px]">
+        Building Brands, One Success Story at a Time.
+      </h3>
+
+      <h3 class="w-full max-w-xl pt-5 text-base font-medium leading-[1.5] sm:text-lg md:text-[20px]">
+        Create a Brand That Resonates: We Can Help You Define and Communicate
+        Your Unique Message.
+      </h3>
+
+      <button class="mt-[30px] rounded-[40px] border border-black bg-black px-6 py-[10px] text-base text-white sm:px-[30px] sm:text-[20px]">
+        Our Service
+      </button>
+    </div>
+  </section>
+
+  <!-- patnership -->
+  <section class="logo-marquee w-full overflow-hidden pt-16 sm:pt-24 lg:pt-36">
+    <div class="logo-marquee-track flex w-max items-center">
+      <div class="flex shrink-0 items-center gap-10 pr-10 sm:gap-16 sm:pr-16 lg:gap-20 lg:pr-20">
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418ce9f1b45e141bf28b5_client-logo-03.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418ce2c404b364300ba31_client-logo-04.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418cea9dabe252e43b0c0_client-logo-07.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418cea9dabef95143b0c1_client-logo-06.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418af3b2b766cebaba02d_client-logo-01.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418ce6a0062cf2d279e35_client-logo-02.svg"
+          alt="" />
+      </div>
+
+      <div class="flex shrink-0 items-center gap-10 pr-10 sm:gap-16 sm:pr-16 lg:gap-20 lg:pr-20" aria-hidden="true">
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418ce9f1b45e141bf28b5_client-logo-03.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418ce2c404b364300ba31_client-logo-04.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418cea9dabe252e43b0c0_client-logo-07.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418cea9dabef95143b0c1_client-logo-06.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418af3b2b766cebaba02d_client-logo-01.svg"
+          alt="" />
+        <img class="h-7 w-auto shrink-0 sm:h-8 lg:h-10"
+          src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418ce6a0062cf2d279e35_client-logo-02.svg"
+          alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="grid grid-cols-1 gap-4 pt-16 sm:grid-cols-2 md:gap-6 lg:pt-[10%] xl:grid-cols-4">
+    <div class="w-full bg-zinc-100 px-6 py-10 sm:px-8 sm:py-[60px]">
+      <h3 class="text-xl font-medium md:text-[25px]">Brand Strategy</h3>
+      <p class="pt-6 sm:pt-10">
+        We help businesses define their unique brand message and branding
+        positioning.
+      </p>
+      <button class="pt-6 underline sm:pt-10">About Strategy</button>
+    </div>
+
+    <div class="w-full bg-zinc-100 px-6 py-10 sm:px-8 sm:py-[60px]">
+      <h3 class="text-xl font-medium md:text-[25px]">Visual Identity</h3>
+      <p class="pt-6 sm:pt-10">
+        We create visual elements such as logos, packaging, and marketing
+        materials for your brand.
+      </p>
+      <button class="pt-6 underline sm:pt-10">About Identity</button>
+    </div>
+
+    <div class="w-full bg-zinc-100 px-6 py-10 sm:px-8 sm:py-[60px]">
+      <h3 class="text-xl font-medium md:text-[25px]">Digital Marketing</h3>
+      <p class="pt-6 sm:pt-10">
+        We help businesses to promote their brand online and create engaging
+        digital experiences.
+      </p>
+      <button class="pt-6 underline sm:pt-10">About Marketing</button>
+    </div>
+
+    <div class="w-full bg-zinc-100 px-6 py-10 sm:px-8 sm:py-[60px]">
+      <h3 class="text-xl font-medium md:text-[25px]">Brand Management</h3>
+      <p class="pt-6 sm:pt-10">
+        We help businesses to implement their brand across all touchpoints and
+        ensure consistency.
+      </p>
+      <button class="pt-6 underline sm:pt-10">About Management</button>
+    </div>
+  </section>
+
+  <!-- Our Word -->
+  <section class="py-14 md:py-20">
+    <div>
+      <h2 class="text-[15px] font-light text-zinc-700">Our Work</h2>
+
+      <hr class="mt-5" />
+    </div>
+
+    <div class="flex flex-col gap-5 pt-10 sm:flex-row sm:items-center sm:justify-between">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl">Selected Work</h2>
+
+      <button
+        class="text-[12px] font-extralight border text-black border-black rounded-full px-7 py-3 hover:bg-black hover:text-white">
+        All Work
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 gap-5 pt-10 md:grid-cols-2">
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c6b981e34f347cacdc73b6_project-01-thumb.webp"
+            alt=""
+            class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 py-5 text-lg sm:text-[20px]">
+          <h3>Invision Studio</h3>
+
+          <button
+            class="text-[12px] font-normal border text-black border-black rounded-full px-3 py-1 hover:bg-black hover:text-white">
+            Marketing
+          </button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c6b96d86c0c985079d8d60_project-02-thumb.webp"
+            alt=""
+            class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 py-5 text-lg sm:text-[20px]">
+          <h3>Square Media</h3>
+
+          <button
+            class="text-[12px] font-normal border text-black border-black rounded-full px-3 py-1 hover:bg-black hover:text-white">
+            Branding
+          </button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c6b953a2c1a5706f63bbe1_project-03-thumb.webp"
+            alt=""
+            class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 py-5 text-lg sm:text-[20px]">
+          <h3>Vision Design</h3>
+
+          <button
+            class="text-[12px] font-normal border text-black border-black rounded-full px-3 py-1 hover:bg-black hover:text-white">
+            Social Media
+          </button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c6b943f334e17d7007a0ea_project-04-thumb.webp"
+            alt=""
+            class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110" />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 py-5 text-lg sm:text-[20px]">
+          <h3>Design Bros</h3>
+
+          <button
+            class="text-[12px] font-normal border text-black border-black rounded-full px-3 py-1 hover:bg-black hover:text-white">
+            Branding
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- our values -->
+
+  <section>
+    <div>
+      <h2 class="text-[15px] font-light text-zinc-700">Our Values</h2>
+
+      <hr class="mt-5" />
+    </div>
+
+    <section class="grid grid-cols-1 auto-rows-[minmax(240px,auto)] gap-5 py-14 sm:grid-cols-2 sm:auto-rows-[320px] lg:grid-cols-4 lg:auto-rows-[400px] lg:gap-12 lg:py-20">
+      <div class="flex h-full flex-col justify-between bg-[#F2F5F9] px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <div>
+          <h4 class="text-sm">Services</h4>
+
+          <h3 class="mt-10 text-[22px] font-medium">
+            Our Approach to Branding.
+          </h3>
+        </div>
+
+        <button
+          class="mb-5 w-fit text-[14px] font-extralight border text-white border-black rounded-full px-8 py-3 bg-black">
+          About Oliv <i class="ri-arrow-right-up-line"></i>
+        </button>
+      </div>
+
+      <div class="flex h-full flex-col justify-between bg-[#F2F6F5] px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <h3 class="text-sm">
+          HELPING BRANDS <br />
+          STAND OUT
+        </h3>
+
+        <h3 class="font-medium text-xl">
+          BOLD MOVES. <br />
+          BIG IMPACT.
+        </h3>
+      </div>
+
+      <div class="flex h-full flex-col justify-between bg-[#F8F8F8] px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <h3 class="text-sm">
+          HOW WE WORK<br />
+          WITH OUR CLIENTS
+        </h3>
+
+        <h3 class="font-medium text-xl">
+          HONESTY IS THE <br />
+          BEST POLICY.
+        </h3>
+      </div>
+
+      <div class="hidden h-full lg:block"></div>
+
+      <div class="hidden h-full lg:block"></div>
+
+      <div class="flex h-full flex-col justify-between bg-[#F8F8F8] px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <h3 class="text-sm uppercase">Collaboration is Key</h3>
+
+        <h3 class="font-medium text-xl uppercase">
+          Building Strong <br />
+          Partnerships.
+        </h3>
+      </div>
+
+      <div class="flex h-full flex-col justify-between bg-[#F6EEE4] px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <h3 class="text-sm uppercase">Our Approach</h3>
+
+        <h3 class="font-medium text-xl uppercase">
+          Achieving <br />
+          Real Results.
+        </h3>
+      </div>
+
+      <div class="flex h-full flex-col justify-between bg-[#FEFAE9] px-6 py-8 sm:px-8 lg:px-12 lg:py-10">
+        <h3 class="text-sm uppercase">Our Philosophy</h3>
+
+        <h3 class="font-medium text-xl uppercase">
+          Building Trust, <br />
+          Not Pitching.
+        </h3>
+      </div>
+    </section>
+  </section>
+
+  <!-- about -->
+
+  <section class="mx-auto max-w-5xl py-8 md:py-14">
+    <h3 class="text-start text-3xl leading-[1.35] sm:text-4xl lg:text-5xl">
+      Crafting Exceptional Digital Experiences Across Al Platforms: Our Goal
+      at Øliv.
+    </h3>
+
+    <div class="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 md:gap-10">
+      <p class="text-base text-[#52525C] leading-[1.5] tracking-wider">
+        At Øliv, our goal is to craft exceptional digital experiences across
+        all platforms. In today's digitally driven world, having a strong
+        online presence is paramount for businesses to connect with their
+        target audience effectively. We understand the importance of
+        delivering seamless and engaging experiences that leave a lasting
+        impression.
+      </p>
+
+      <p class="text-base text-[#52525C] leading-[1.5] tracking-wider">
+        Our team of skilled designers, developers, and digital strategists
+        collaborate to create customized digital solutions tailored to your
+        unique business needs. Whether it's designing a user-friendly website,
+        developing a mobile application, or enhancing your e-commerce
+        platform, we strive to provide solutions that not only meet but exceed
+        your expectations.
+      </p>
+    </div>
+  </section>
+
+  <!-- out team -->
+  <section class="py-14 md:py-20">
+    <div>
+      <h2 class="text-[15px] font-light text-zinc-700">Our Values</h2>
+
+      <hr class="mt-5" />
+    </div>
+
+    <div class="flex flex-col gap-5 pt-10 sm:flex-row sm:items-center sm:justify-between">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl">Our Team of Experts</h2>
+
+      <button
+        class="text-[12px] font-extralight border text-black border-black rounded-full px-7 py-3 hover:bg-black hover:text-white">
+        About Us
+      </button>
+    </div>
+
+    <section class="grid grid-cols-1 gap-6 py-14 sm:grid-cols-2 lg:gap-5 lg:py-20 xl:grid-cols-4">
+      <div class="flex min-h-[360px] flex-col justify-between bg-[#F2F6F5] px-6 py-8 sm:px-8 lg:px-10 lg:py-10 xl:px-12">
+        <div>
+          <h4 class="text-sm uppercase">Join the Team</h4>
+
+          <h3 class="mt-8 text-xl font-medium leading-[1.55] sm:text-[25px] lg:mt-10 lg:leading-[1.75]">
+            Want to shape the future of branding?
+          </h3>
+
+          <h3 class="text-xs font-thin pt-3 text-[#9F9FA8] leading-[2]">
+            Join us and shape the future of branding today!
+          </h3>
+        </div>
+
+        <button
+          class="mb-5 w-fit text-[14px] font-extralight border text-white border-black rounded-full px-8 py-3 bg-black">
+          About Oliv
+        </button>
+      </div>
+
+      <div class="flex h-full flex-col justify-between">
+        <div class="group relative h-[340px] overflow-hidden sm:h-[400px] lg:h-[430px]">
+          <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src="https://assets-global.website-files.com/63c3f1995d4c3581bbc944b5/63c68f2ecddac415070de2e8_team-01-p-500.webp"
+            alt="" />
+
+          <div class="absolute bottom-5 right-5 flex justify-evenly items-center gap-3">
+            <a href="#" aria-label="Instagram"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="#" aria-label="X"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all delay-75 duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-twitter-x-line"></i>
+            </a>
+            <a href="#" aria-label="Behance"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all delay-100 duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-behance-line"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 py-5 text-lg sm:text-[20px]">
+          <h3>Annette Black</h3>
+
+          <button
+            class="text-[12px] font-normal border text-black border-black rounded-full px-3 py-1 hover:bg-black hover:text-white">
+            Branding
+          </button>
+        </div>
+      </div>
+
+      <div class="flex h-full flex-col justify-between">
+        <div class="group relative h-[340px] overflow-hidden sm:h-[400px] lg:h-[430px]">
+          <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src="https://assets-global.website-files.com/63c3f1995d4c3581bbc944b5/63c68f2e0a57ab81ad90f31f_team-02-p-500.webp"
+            alt="" />
+
+          <div class="absolute bottom-5 right-5 flex justify-evenly items-center gap-3">
+            <a href="#" aria-label="Instagram"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="#" aria-label="X"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all delay-75 duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-twitter-x-line"></i>
+            </a>
+            <a href="#" aria-label="Behance"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all delay-100 duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-behance-line"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 py-5 text-lg sm:text-[20px]">
+          <h3>Devon Lane</h3>
+
+          <button
+            class="text-[12px] font-normal border text-black border-black rounded-full px-3 py-1 hover:bg-black hover:text-white">
+            Branding
+          </button>
+        </div>
+      </div>
+
+      <div class="flex h-full flex-col justify-between">
+        <div class="group relative h-[340px] overflow-hidden sm:h-[400px] lg:h-[430px]">
+          <img class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            src="https://assets-global.website-files.com/63c3f1995d4c3581bbc944b5/63c68f2ed7fe4b9a5bef7ee1_team-03-p-500.webp"
+            alt="" />
+
+          <div class="absolute bottom-5 right-5 flex justify-evenly items-center gap-3">
+            <a href="#" aria-label="Instagram"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a href="#" aria-label="X"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all delay-75 duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-twitter-x-line"></i>
+            </a>
+            <a href="#" aria-label="Behance"
+              class="flex h-10 w-10 translate-y-14 items-center justify-center rounded-full bg-black text-white text-lg opacity-0 transition-all delay-100 duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <i class="ri-behance-line"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-3 py-5 text-lg sm:text-[20px]">
+          <h3>Chris Watson</h3>
+
+          <button
+            class="text-[12px] font-normal border text-black border-black rounded-full px-3 py-1 hover:bg-black hover:text-white">
+            Branding
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-5xl py-10">
+      <div class="flex flex-col gap-8 lg:flex-row lg:gap-20">
+        <div class="shrink-0 lg:w-1/3">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418ce6a0062cf2d279e35_client-logo-02.svg"
+            alt="" class="h-auto w-44 sm:w-56 lg:w-full" />
+        </div>
+
+        <div class="min-w-0">
+          <h3 class="text-2xl font-light leading-[1.5] sm:text-3xl">
+            “We couldn't be happier with the branding strategy developed.”
+          </h3>
+
+          <p class="my-10 text-[15px] tracking-wider leading-[1.7]">
+            We approached Øliv for a complete rebranding of our company and we
+            couldn't be happier with the results. Their market research and
+            analysis helped us define our target audience and unique brand
+            positioning. Their team then created a visually compelling logo
+            and consistent branding across all touchpoints.
+          </p>
+          <p class="text-[15px] tracking-wider leading-[1.7]">
+            The new brand has helped us stand out in the market and increase
+            sales. We highly recommend Øliv to any business looking to rebrand
+            or refresh their brand.
+          </p>
+        </div>
+      </div>
+
+      <hr class="mt-10 h-px w-full border-0 bg-[#E4E4E7]" />
+    </section>
+
+    <section class="mx-auto max-w-5xl py-10">
+      <div class="flex flex-col gap-8 lg:flex-row lg:gap-20">
+        <div class="shrink-0 lg:w-1/3">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c418cea9dabef95143b0c1_client-logo-06.svg"
+            alt="" class="h-auto w-44 sm:w-56 lg:w-full" />
+        </div>
+
+        <div class="min-w-0">
+          <h3 class="text-2xl font-light leading-[1.5] sm:text-3xl">
+            “Expert Brand Management from Øliv”
+          </h3>
+
+          <p class="my-10 text-[15px] tracking-wider leading-[1.7]">
+            As a growing business, it was important for us to have a strong
+            and consistent brand. Øliv's brand management services helped us
+            to achieve this. They conducted a thorough brand audit and
+            provided valuable insights and recommendations.
+          </p>
+          <p class="text-[15px] tracking-wider leading-[1.7]">
+            Their ongoing monitoring and implementation of our brand has
+            helped us maintain consistency and stay aligned with our business
+            goals. We couldn't be happier with the results and highly
+            recommend Øliv's brand management services.
+          </p>
+        </div>
+      </div>
+
+      <hr class="mt-10 h-px w-full border-0 bg-[#E4E4E7]" />
+    </section>
+  </section>
+
+  <!-- contact -->
+  <section class="my-10 flex flex-col gap-8 bg-[#F2F6F5] px-6 py-12 sm:px-10 lg:flex-row lg:gap-20 lg:px-20 lg:py-20">
+    <div class="lg:w-[30%]">contact</div>
+
+    <div class="min-w-0 lg:w-[70%]">
+      <h3 class="w-full text-3xl font-light leading-[1.35] tracking-wider sm:text-4xl lg:text-5xl lg:leading-[1.5]">
+        Let's start building your brand's unique story together.
+      </h3>
+
+      <p class="my-8 w-full max-w-2xl text-lg sm:text-xl md:text-2xl">
+        Want to see what a difference a strong brand can make? Request a
+        consultation today.
+      </p>
+
+      <button
+        class="mb-5 w-fit text-[20px] font-extralight border text-white border-black rounded-full px-8 py-3 bg-black">
+        About Oliv <i class="ri-arrow-right-up-line"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- blog -->
+
+  <section class="py-14 md:py-20">
+    <div>
+      <h2 class="text-[15px] font-light text-zinc-700">Blog</h2>
+
+      <hr class="mt-5" />
+    </div>
+
+    <div class="flex flex-col gap-5 pt-10 sm:flex-row sm:items-center sm:justify-between">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl">Insights on Branding</h2>
+
+      <button
+        class="text-[12px] font-extralight border text-black border-black rounded-full px-7 py-3 hover:bg-black hover:text-white">
+        See All
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 pt-10 sm:grid-cols-2 lg:gap-10 xl:grid-cols-4">
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c6926c3e0cadb265cce971_post-01-thumb-p-500.webp"
+            alt=""
+            class="h-[240px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 sm:h-[260px] lg:h-[300px]" />
+        </div>
+
+        <div class="py-4 text-lg sm:text-xl">
+          <h3>The Importance of a Strong Brand Positioning</h3>
+
+          <button class="text-[15px] my-3">Read more</button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c692830763057ff261e841_post-02-thumb-p-500.webp"
+            alt=""
+            class="h-[240px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 sm:h-[260px] lg:h-[300px]" />
+        </div>
+
+        <div class="py-4 text-lg sm:text-xl">
+          <h3>Creating a Consistent Brand Identity Across All Touchpoints</h3>
+
+          <button class="text-[15px] my-3">Read more</button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c69293cb2ab32755a1a6d7_post-03-thumb-p-500.webp"
+            alt=""
+            class="h-[240px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 sm:h-[260px] lg:h-[300px]" />
+        </div>
+
+        <div class="py-4 text-lg sm:text-xl">
+          <h3>The Role of Market Research in Branding Strategy</h3>
+
+          <button class="text-[15px] my-3">Read more</button>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="overflow-hidden">
+          <img
+            src="https://cdn.prod.website-files.com/63c3f1995d4c354236c944de/63c692a30a57ab0d6c9128fe_post-04-thumb-p-500.webp"
+            alt=""
+            class="h-[240px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 sm:h-[260px] lg:h-[300px]" />
+        </div>
+
+        <div class="py-4 text-lg sm:text-xl">
+          <h3>The Impact of Social Media on Branding</h3>
+
+          <button class="text-[15px] my-3">Read more</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section>
+
+    <section class="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <img src="https://cdn.prod.website-files.com/63c3f1995d4c3581bbc944b5/63c3fed42405e70f33df42ee_logo.svg" alt="">
+
+        <div class="mt-8 flex items-center gap-3">
+          <a href="#" aria-label="Instagram"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#F2F8FE] text-black text-lg ">
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="#" aria-label="X"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#F2F8FE] text-black text-lg">
+            <i class="ri-twitter-x-line"></i>
+          </a>
+          <a href="#" aria-label="Behance"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#F2F8FE] text-black text-lg">
+            <i class="ri-behance-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg mb-3">Pages</h3>
+
+        <hr class="w-full h-0.5 bg-[#E4E4E7]" />
+
+        <ul class="py-5">
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Home</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Services</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">About</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Jobs</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Contact</span>
+          </li>
+
+          <button
+            class="mb-5 w-fit text-[14px] font-extralight border text-white border-black rounded-full px-8 py-3 bg-black mt-6">
+            More Templates
+          </button>
+
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg mb-3">CMS</h3>
+
+        <hr class="w-full h-0.5 bg-[#E4E4E7]" />
+
+        <ul class="py-5">
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Work</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Work
+              Single</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Blog</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Blog
+              Single</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Shop</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Shop
+              Single</span>
+          </li>
+
+        </ul>
+      </div>
+
+
+      <div>
+        <h3 class="text-lg mb-3">Utility Pages</h3>
+
+        <hr class="w-full h-0.5 bg-[#E4E4E7]" />
+
+        <ul class="py-5">
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">404 Error Page</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Password Protected</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Styleguide</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Licencing</span>
+          </li>
+
+          <li class="group flex cursor-pointer items-center whitespace-nowrap text-sm mt-4">
+            <span
+              class="relative inline-block py-0.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:origin-bottom-left after:scale-x-0 after:bg-black after:transition-transform after:duration-500 after:content-[''] group-hover:after:scale-x-100">Changelog</span>
+          </li>
+
+        </ul>
+      </div>
+
+    </section>
+
+    <section>
+       <hr class="w-full h-0.5 bg-[#E4E4E7]" />
+
+       <section class="my-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+        <div>
+          <h3 class="text-[#9F9FA8] text-sm"><i class="ri-copyright-line"></i>Made by <span class="text-black underline">Pawel Gola</span>-Powered by <span class="text-black underline">Webflow</span></h3>
+        </div>
+
+        <div class="flex items-center gap-10">
+          <a class="text-[#9F9FA8] text-sm" href="">Privacy</a>
+          <a class="text-[#9F9FA8] text-sm" href="">Imprint</a>
+        </div>
+       </section>
+
+    </section>
+
+  </section>
+  <script>
+    const menuToggle = document.querySelector("#menu-toggle");
+    const mobileMenu = document.querySelector("#mobile-menu");
+    const menuIcon = menuToggle?.querySelector("i");
+
+    menuToggle?.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      mobileMenu?.classList.toggle("hidden", isOpen);
+      menuIcon?.classList.toggle("ri-menu-line", isOpen);
+      menuIcon?.classList.toggle("ri-close-line", !isOpen);
+    });
+  </script>
+</body>
+
+</html>
